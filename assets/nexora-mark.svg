@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-label="NEXORA">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#b84670"/><stop offset="1" stop-color="#e86f91"/></linearGradient></defs>
+  <path fill="url(#g)" d="M20 45V19h7l13 16V19h7v26h-7L27 29v16z"/><path fill="#39283c" d="M54 45V19h19v6H61v4h11v6H61v4h12v6zm27 0 10-14-9-12h9l5 7 5-7h9l-9 12 10 14h-9l-6-9-6 9zm31 0 9-26h10l9 26h-8l-2-6h-9l-2 6zm10-12h5l-2-8zm24 12V19h12c7 0 11 3 11 9 0 4-2 7-6 8l7 9h-9l-6-8h-1v8zm8-15h3c3 0 4-1 4-3 0-2-1-3-4-3h-3z"/>
+  <circle cx="202" cy="25" r="4" fill="#e86f91"/><circle cx="202" cy="40" r="4" fill="#b84670"/>
+</svg>
