@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff8f4" />
+    <meta name="description" content="A tiny digital birthday surprise from NEXORA." />
+    <title>NEXORA · Birthday Surprise</title>
+    <link rel="icon" href="assets/nexora-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell" id="app-shell">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="sparkle-field" id="sparkle-field" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="NEXORA home" data-replay>
+          <img src="assets/nexora-mark.svg" alt="NEXORA" />
+        </a>
+        <div class="topbar-tools">
+          <span class="progress-note" id="progress-note">A little surprise · 01 / 07</span>
+          <button class="icon-button sound-toggle" id="sound-toggle" type="button" aria-label="Toggle birthday sounds" aria-pressed="false">
+            <span class="sound-icon" aria-hidden="true">♫</span>
+            <span class="sound-label">sound off</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="experience" id="experience" aria-live="polite">
+        <section class="scene scene-welcome is-active" data-scene="0" aria-labelledby="welcome-title">
+          <div class="scene-art welcome-art" aria-hidden="true">
+            <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span>
+            <span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span>
+            <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+            <div class="penguin penguin-welcome">
+              <span class="penguin-scarf"></span><span class="penguin-wing wing-left"></span><span class="penguin-wing wing-right"></span>
+              <span class="penguin-body"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="beak"></i><i class="belly"></i></span>
+              <span class="penguin-foot foot-left"></span><span class="penguin-foot foot-right"></span>
+            </div>
+            <div class="tiny-gift gift-floating"><span></span></div>
+          </div>
+          <div class="scene-copy welcome-copy">
+            <p class="eyebrow">a tiny digital gift · from <span data-brand>NEXORA</span></p>
+            <h1 id="welcome-title">Hey, <span class="name-accent" data-recipient>Maya</span>!</h1>
+            <p class="lede">Someone has a little surprise for you<span class="dot-dot">…</span></p>
+            <button class="primary-button" type="button" data-next>
+              <span>Open your surprise</span><span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <p class="micro-note"><span class="heart-dot">♥</span> best experienced with the sound on</p>
+          </div>
+        </section>
+
+        <section class="scene scene-question" data-scene="1" aria-labelledby="question-title" hidden>
+          <div class="scene-art question-art" aria-hidden="true">
+            <span class="question-cloud cloud-a"></span><span class="question-cloud cloud-b"></span>
+            <div class="question-bubble bubble-one">really?</div><div class="question-bubble bubble-two">promise?</div>
+            <div class="penguin penguin-question">
+              <span class="penguin-wing wing-left"></span><span class="penguin-wing wing-right"></span>
+              <span class="penguin-body"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="beak"></i><i class="belly"></i></span>
+              <span class="penguin-foot foot-left"></span><span class="penguin-foot foot-right"></span>
+            </div>
+          </div>
+          <div class="scene-copy question-copy">
+            <p class="eyebrow">one important question</p>
+            <h2 id="question-title">Are you ready for the most adorable birthday surprise?</h2>
+            <p class="support-copy" id="no-message">There is really only one correct answer here.</p>
+            <div class="question-actions">
+              <button class="primary-button yes-button" type="button" data-next><span>YES!</span><span class="button-arrow" aria-hidden="true">♡</span></button>
+              <button class="ghost-button no-button" id="no-button" type="button">Hmm… no?</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene-reveal" data-scene="2" aria-labelledby="reveal-title" hidden>
+          <div class="scene-art reveal-art" aria-hidden="true">
+            <span class="confetti confetti-one"></span><span class="confetti confetti-two"></span><span class="confetti confetti-three"></span><span class="confetti confetti-four"></span>
+            <div class="cake-wrap">
+              <div class="cake-plate"></div><div class="cake tier tier-bottom"></div><div class="cake tier tier-top"></div>
+              <div class="frosting drip-one"></div><div class="frosting drip-two"></div><div class="frosting drip-three"></div>
+              <button class="flame flame-one" type="button" aria-label="Blow out candle 1"><span></span></button>
+              <button class="flame flame-two" type="button" aria-label="Blow out candle 2"><span></span></button>
+              <button class="flame flame-three" type="button" aria-label="Blow out candle 3"><span></span></button>
+            </div>
+            <div class="cake-sparkle sparkle-one">✦</div><div class="cake-sparkle sparkle-two">✧</div>
+          </div>
+          <div class="scene-copy reveal-copy">
+            <p class="eyebrow">make a wish, birthday star</p>
+            <h2 id="reveal-title">Happy birthday, <span class="name-accent" data-recipient>Maya</span>!</h2>
+            <p class="support-copy">Tap the candles to send your wish into the universe.</p>
+            <div class="reveal-status" id="reveal-status"><span class="status-dot"></span> three little wishes waiting</div>
+            <button class="primary-button reveal-continue" type="button" data-next disabled><span>Wish made</span><span class="button-arrow" aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section class="scene scene-message" data-scene="3" aria-labelledby="message-title" hidden>
+          <div class="message-stamp" aria-hidden="true"><span>with</span><strong>♡</strong><span>love</span></div>
+          <div class="scene-copy message-copy">
+            <p class="eyebrow">a note from <span data-sender>Someone who adores you</span></p>
+            <h2 id="message-title">For the moments that make you, <em>you.</em></h2>
+            <div class="letter-card">
+              <span class="letter-line line-one"></span><span class="letter-line line-two"></span>
+              <p id="animated-message">You make ordinary days feel like little celebrations.</p>
+              <span class="letter-sign">always cheering for you <b>♥</b></span>
+            </div>
+            <button class="primary-button" type="button" data-next><span>Keep going</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+
+        <section class="scene scene-gallery" data-scene="4" aria-labelledby="gallery-title" hidden>
+          <div class="scene-copy gallery-copy">
+            <div class="gallery-heading">
+              <div><p class="eyebrow">the good stuff</p><h2 id="gallery-title">Little pieces of wonderful</h2></div>
+              <span class="gallery-count" id="gallery-count">01 / 03</span>
+            </div>
+            <div class="gallery-viewport">
+              <div class="gallery-track" id="gallery-track"></div>
+            </div>
+            <div class="gallery-controls">
+              <button class="round-button" id="gallery-prev" type="button" aria-label="Previous memory">←</button>
+              <div class="gallery-dots" id="gallery-dots" aria-label="Memory gallery pages"></div>
+              <button class="round-button" id="gallery-next" type="button" aria-label="Next memory">→</button>
+            </div>
+            <button class="primary-button gallery-continue" type="button" data-next><span>There’s more</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+
+        <section class="scene scene-gift" data-scene="5" aria-labelledby="gift-title" hidden>
+          <div class="scene-art gift-art" aria-hidden="true">
+            <span class="gift-glow"></span><span class="gift-sparkle gift-sparkle-a">✦</span><span class="gift-sparkle gift-sparkle-b">✧</span>
+            <button class="gift-box" id="gift-box" type="button" aria-label="Open your virtual gift"><span class="gift-lid"></span><span class="gift-ribbon ribbon-v"></span><span class="gift-ribbon ribbon-h"></span><span class="gift-bow bow-left"></span><span class="gift-bow bow-right"></span><span class="gift-body"></span></button>
+            <div class="gift-burst" id="gift-burst" aria-hidden="true"></div>
+          </div>
+          <div class="scene-copy gift-copy">
+            <p class="eyebrow">one last little thing</p>
+            <h2 id="gift-title">A gift, wrapped in pixels.</h2>
+            <p class="support-copy" id="gift-instruction">Tap the bow when you’re ready.</p>
+            <div class="gift-reveal" id="gift-reveal" hidden>
+              <p class="gift-message" data-gift-message></p>
+              <button class="hug-button" id="hug-button" type="button"><span class="hug-icon">♡</span> send a virtual hug</button>
+              <p class="hug-response" id="hug-response" aria-live="polite"></p>
+            </div>
+            <button class="primary-button gift-continue" id="gift-continue" type="button" data-next disabled><span>One more thing</span><span class="button-arrow" aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section class="scene scene-final" data-scene="6" aria-labelledby="final-title" hidden>
+          <div class="scene-art final-art" aria-hidden="true">
+            <div class="final-burst"></div><span class="heart heart-a">♥</span><span class="heart heart-b">♥</span><span class="heart heart-c">♥</span><span class="heart heart-d">♥</span>
+            <div class="penguin penguin-final">
+              <span class="penguin-crown">✦</span><span class="penguin-wing wing-left"></span><span class="penguin-wing wing-right"></span>
+              <span class="penguin-body"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="beak"></i><i class="belly"></i></span>
+              <span class="penguin-foot foot-left"></span><span class="penguin-foot foot-right"></span>
+            </div>
+          </div>
+          <div class="scene-copy final-copy">
+            <p class="eyebrow">the end… or the beginning</p>
+            <h2 id="final-title">Happy birthday, <span class="name-accent" data-recipient>Maya</span>! <span class="title-heart">♥</span></h2>
+            <p class="final-message" data-final-message>Keep being your bright, wonderfully you-shaped self.</p>
+            <p class="final-signoff">with all the good things,<br /><strong data-sender>Someone who adores you</strong></p>
+            <button class="secondary-button" type="button" data-replay><span>Replay the surprise</span><span aria-hidden="true">↻</span></button>
+          </div>
+          <p class="final-brand"><span data-brand>NEXORA</span> · made for your favorite people</p>
+        </section>
+      </main>
+
+      <footer class="footer-note"><span>made with a little extra sparkle</span><span class="footer-separator">·</span><span data-brand>NEXORA</span></footer>
+    </div>
+  </body>
+</html>
